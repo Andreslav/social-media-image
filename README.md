@@ -5,4 +5,6 @@ Page: [Social Media image](https://www.figma.com/c/plugin/750116735703341112/Soc
 
 <img src="artwork.jpg" width="800" />
 
+The plugin contains presets for image sizes of social networks, which allows you to quickly begin directly to design development.
+
 Help with filling [config-size.js](src/config-size.js) is welcome.
