@@ -1,16 +1,45 @@
-.disclosure--expanded .disclosure__content {
-	display: grid;
-    grid-template-columns: 1fr max-content;
-    grid-gap: 1em;
+@import 'figma-plugin-ds-master/scss/base/base';
+@import 'figma-plugin-ds-master/scss/base/typography';
+@import 'figma-plugin-ds-master/scss/base/variables';
+@import 'figma-plugin-ds-master/scss/base/mixins';
+
+@import './figma-plugin-ds-master/scss/components/_disclosure';
+@import './figma-plugin-ds-master/scss/components/_label';
+
+
+body {
+	margin: 8px 0;
 }
-.disclosure__content {
-	cursor: default;
+p {
+	margin: 0;
+}
+
+
+.disclosure {
+	&__content {
+	    grid-template-columns: 1fr max-content;
+	    grid-gap: 1em;
+	    cursor: default;
+	    &.section {
+	        margin: 0 0 -8px -8px;
+	    }
+	}
+	&--expanded &__content {
+		display: grid;
+	}
 }
 .continer {
 	position: relative;
 	overflow: hidden;
 	display: grid;
 	grid-gap: 1em;
-	align-content: start;
 	padding: 16px 0;
+    min-height: 100%;
+}
+
+.last-update {
+	@include font-ui-pos('small','normal');
+	color: $figma-black-3;
+	text-align: center;
+	margin-top: auto;
 }

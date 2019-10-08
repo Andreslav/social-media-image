@@ -24,6 +24,7 @@
     "webpack-cli": "^3.3.7"
   },
   "dependencies": {
-    "@types/jquery": "^3.3.31"
+    "@types/jquery": "^3.3.31",
+    "remove-files-webpack-plugin": "^1.1.3"
   }
 }

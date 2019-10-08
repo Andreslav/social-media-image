@@ -1,9 +1,11 @@
 export default [
 	{
+		type: "list",
 		name: "VK",
 		sizes: [
 			{
-				description: "Community cover",
+				type: "size",
+				name: "Community cover",
 				width: 1590,
 				height: 400,
 				guides: [
@@ -15,14 +17,16 @@ export default [
 				]
 			},
 			{
-				description: "Community avatar",
+				type: "size",
+				name: "Community avatar",
 				width: 200,
 				height: 200,
 				guides: [
 				]
 			},
 			{
-				description: "Big community avatar",
+				type: "size",
+				name: "Big community avatar",
 				width: 200,
 				height: 500,
 				guides: [
@@ -30,7 +34,32 @@ export default [
 				]
 			},
 			{
-				description: "Live cover",
+				type: "size",
+				name: "Profile image",
+				width: 400,
+				height: 400,
+				guides: [				
+				]
+			},
+			{
+				type: "size",
+				name: "Image for post",
+				width: 604,
+				height: 340,
+				guides: [					
+				]
+			},
+			{
+				type: "size",
+				name: "Image for post 1:1",
+				width: 510,
+				height: 510,
+				guides: [					
+				]
+			},
+			{
+				type: "size",
+				name: "Live cover",
 				width: 1080,
 				height: 1920,
 				guides: [
@@ -43,42 +72,24 @@ export default [
 				]
 			},
 			{
-				description: "Profile image",
-				width: 400,
-				height: 400,
-				guides: [				
-				]
-			},
-			{
-				description: "Image for Posts 1:1",
-				width: 510,
-				height: 510,
-				guides: [					
-				]
-			},
-			{
-				description: "Image for Posts 3:2",
-				width: 510,
-				height: 340,
-				guides: [					
-				]
-			},
-			{
-				description: "Article cover",
+				type: "size",
+				name: "Article cover",
 				width: 510,
 				height: 286,
 				guides: [					
 				]
 			},
 			{
-				description: "Shared Link",
+				type: "size",
+				name: "Shared link",
 				width: 537,
 				height: 240,
 				guides: [					
 				]
 			},
 			{
-				description: "Photo Album Cover",
+				type: "size",
+				name: "Photo album Cover",
 				width: 1200,
 				height: 800,
 				guides: [
@@ -86,35 +97,44 @@ export default [
 				]
 			},
 			{
-				description: "Image for storefront",
+				type: "size",
+				name: "Image for storefront",
 				width: 1000,
 				height: 1000,
 				guides: [
 				]
 			},
 			{
-				description: "Photo for stories",
+				type: "size",
+				name: "Photo for stories",
 				width: 1080,
 				height: 1920,
 				guides: [
 				]
 			},
 			{
-				description: "Advertisements: image and text",
+				type: "label",
+				name: "Advertisements",
+			},
+			{
+				type: "size",
+				name: "Image and text",
 				width: 145,
 				height: 85,
 				guides: [					
 				]
 			},
 			{
-				description: "Advertisements: large image",
+				type: "size",
+				name: "Large image",
 				width: 145,
 				height: 165,
 				guides: [					
 				]
 			},
 			{
-				description: "Advertisements: community Promotion",
+				type: "size",
+				name: "Community promotion",
 				width: 145,
 				height: 145,
 				guides: [					
@@ -123,24 +143,36 @@ export default [
 		]
 	},
 	{
+		type: "list",
 		name: "Twitter",
 		sizes: [
 			{
-				description: "Header Photo",
+				type: "size",
+				name: "Header photo",
 				width: 1500,
 				height: 500,
 				guides: [
 				]
 			},
 			{
-				description: "Profile Photo",
+				type: "size",
+				name: "Profile photo",
 				width: 400,
 				height: 400,
 				guides: [					
 				]
 			},
 			{
-				description: "In-Stream Photo",
+				type: "size",
+				name: "Post photo",
+				width: 1012,
+				height: 506,
+				guides: [					
+				]
+			},
+			{
+				type: "size",
+				name: "In-Stream photo",
 				width: 440,
 				height: 220,
 				guides: [					
@@ -149,70 +181,88 @@ export default [
 		]
 	},
 	{
+		type: "list",
 		name: "YouTube",
 		sizes: [
 			{
-				description: "Channel Cover",
+				type: "size",
+				name: "Channel сover",
 				width: 2560,
 				height: 1440,
 				guides: [
-					{axis: "X", offset: 353},
+					{axis: "X", offset: 352},
 					{axis: "X", offset: 507},
 					{axis: "X", offset: 2053},
-					{axis: "Y", offset: 510},
-					{axis: "Y", offset: 928},
-					{axis: "X", offset: 2208},
+					{axis: "X", offset: 2207},
+					{axis: "Y", offset: 509},
+					{axis: "Y", offset: 932},
 				]
 			},
 			{
-				description: "Video Uploads",
+				type: "size",
+				name: "Channel icon",
+				width: 800,
+				height: 800,
+				guides: [					
+				]
+			},
+			{
+				type: "size",
+				name: "Video thumbnails",
 				width: 1280,
-				height: 760,
+				height: 720,
 				guides: [					
 				]
 			}
 		]
 	},
 	{
+		type: "list",
 		name: "Facebook",
 		sizes: [
 			{
-				description: "Cover Photo",
+				type: "size",
+				name: "Cover photo",
 				width: 820,
 				height: 312,
 				guides: [
 				]
 			},
 			{
-				description: "Profile image",
+				type: "size",
+				name: "Profile image",
 				width: 180,
 				height: 180,
 				guides: [					
 				]
 			},
 			{
-				description: "Event image",
+				type: "size",
+				name: "Event image",
 				width: 1920,
 				height: 1080,
 				guides: [					
 				]
 			},
 			{
-				description: "Shared Image",
+				type: "size",
+				name: "Post image",
 				width: 1200,
 				height: 630,
 				guides: [					
 				]
 			},
 			{
-				description: "Shared Link",
+				type: "size",
+				name: "Shared link",
 				width: 1200,
 				height: 627,
 				guides: [					
 				]
 			},
 			{
-				description: "Highlighted Image",
+				type: "size",
+				name: "Highlighted image",
 				width: 1200,
 				height: 717,
 				guides: [					
@@ -221,31 +271,58 @@ export default [
 		]
 	},
 	{
+		type: "list",
+		name: "Instagram",
+		sizes: [
+			{
+				type: "size",
+				name: "Profile image",
+				width: 110,
+				height: 110,
+				guides: [
+				]
+			},
+			{
+				type: "size",
+				name: "Image for posts",
+				width: 1080,
+				height: 1080,
+				guides: [
+				]
+			}
+		]
+	},
+	{
+		type: "list",
 		name: "LinkedIn",
 		sizes: [
 			{
-				description: "Personal Background image",
+				type: "size",
+				name: "Personal background image",
 				width: 1584,
 				height: 396,
 				guides: [
 				]
 			},
 			{
-				description: "Standard Logo",
+				type: "size",
+				name: "Standard logo",
 				width: 400,
 				height: 400,
 				guides: [
 				]
 			},
 			{
-				description: "Profile image",
+				type: "size",
+				name: "Profile image",
 				width: 400,
 				height: 400,
 				guides: [
 				]
 			},
 			{
-				description: "Company Background image",
+				type: "size",
+				name: "Company background image",
 				width: 1536,
 				height: 768,
 				guides: [
@@ -254,19 +331,22 @@ export default [
 		]
 	},
 	{
-		name: "Instagram",
+		type: "list",
+		name: "Dribbble",
 		sizes: [
 			{
-				description: "Profile image",
-				width: 110,
-				height: 110,
+				type: "size",
+				name: "Shot",
+				width: 400,
+				height: 300,
 				guides: [
 				]
 			},
 			{
-				description: "Image for Posts",
-				width: 1080,
-				height: 1080,
+				type: "size",
+				name: "Shot HD",
+				width: 800,
+				height: 600,
 				guides: [
 				]
 			}

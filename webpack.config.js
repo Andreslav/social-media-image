@@ -1,4 +1,5 @@
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
+const RemovePlugin = require('remove-files-webpack-plugin');
 const webpack = require('webpack'); //to access built-in plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
@@ -54,10 +55,8 @@ module.exports = (env, argv) => ({
 
   // Tells Webpack to generate "ui.html" and to inline "ui.ts" into it
   plugins: [
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
+    new RemovePlugin({
+      after: { include: ['dist/ui.js'] }
     }),
     new HtmlWebpackPlugin({
       template: './src/ui.html',

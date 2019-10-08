@@ -1,13 +1,13 @@
-figma.showUI(__html__, {width:300, height:400})
+figma.showUI(__html__, {width:260, height:400})
 
 figma.ui.onmessage = msg => {
   if (msg.type === 'create-frame') {
     var viewport = figma.viewport.center
     var selection = figma.currentPage.selection[0], x:number, y:number
-
+    
     var node = figma.createFrame()
     node.guides = msg.data.guides
-    node.name =  msg.data.name + " | " + msg.data.description
+    node.name =  msg.data.list + " | " + msg.data.name
     node.resizeWithoutConstraints( msg.data.width,  msg.data.height)
     
     if (selection && selection.type == "FRAME") {
@@ -26,6 +26,7 @@ figma.ui.onmessage = msg => {
     node.x = x
     node.y = y
 
+    figma.viewport.scrollAndZoomIntoView([node])
     figma.currentPage.selection = [node]
     figma.notify("Frame created")
   }
