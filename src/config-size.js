@@ -19,8 +19,8 @@ export default [
 			{
 				type: "size",
 				name: "Community avatar",
-				width: 200,
-				height: 200,
+				width: 400,
+				height: 400,
 				guides: [
 				]
 			},
@@ -233,6 +233,7 @@ export default [
 				name: "Profile image",
 				width: 180,
 				height: 180,
+				round: {x:0,y:0,width:180,height:180},
 				guides: [					
 				]
 			},
@@ -294,6 +295,29 @@ export default [
 	},
 	{
 		type: "list",
+		name: "OK",
+		sizes: [
+			{
+				type: "size",
+				name: "Cover",
+				width: 1944,
+				height: 600,
+				guides: [
+					// Чтобы определить эту зону, в исходном изображении слева и справа необходимо отступить по 482 пикселя и в середине выделить область в 980 на 240 пикселей.
+				]
+			},
+			{
+				type: "size",
+				name: "Profile image",
+				width: 400,
+				height: 400,
+				guides: [
+				]
+			},
+		]
+	},
+	{
+		type: "list",
 		name: "LinkedIn",
 		sizes: [
 			{
@@ -347,6 +371,44 @@ export default [
 				name: "Shot HD",
 				width: 800,
 				height: 600,
+				guides: [
+				]
+			}
+		]
+	},
+	{
+		type: "list",
+		name: "Figma",
+		sizes: [
+			{
+				type: "size",
+				name: "Profile Headers",
+				width: 2880,
+				height: 480,
+				guides: [
+				]
+			},
+			{
+				type: "size",
+				name: "File Cover image",
+				width: 1820,
+				height: 1024,
+				guides: [
+				]
+			},
+			{
+				type: "size",
+				name: "Plugin Icon",
+				width: 128,
+				height: 128,
+				guides: [
+				]
+			},
+			{
+				type: "size",
+				name: "Artwork Plugin",
+				width: 2048,
+				height: 1024,
 				guides: [
 				]
 			}
