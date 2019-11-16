@@ -1,4 +1,99 @@
-<div class="continer">
-	<ul class="disclosure"></ul>
-	<p class="last-update">Last update 18.09.2019</p>
+<div class="header">
+	<div data-page-name="size" class="header__menu-item section-title header__menu-item--select">Size</div>
+	<!-- <div data-page-name="template" class="header__menu-item section-title">Template</div> -->
+	<div data-page-name="settings" class="header__menu-item section-title">Settings</div>
+	<div data-page-name="about" class="header__menu-item section-title">About</div>
 </div>
+<div class="divider"></div>
+
+<main data-page="size">
+	<ul class="disclosure"></ul>
+</main>
+
+<!-- <main data-page="template">
+	<div class="label">Templates</div>
+</main> -->
+
+
+
+<main data-page="settings" class="settings">
+	<div class="row section-title">Guides</div>
+	<div class="props">
+		<div class="checkbox">
+		    <input class="checkbox__box" type="checkbox" id="is-create-guides" checked>
+		    <label class="checkbox__label" for="is-create-guides">Create guides</label>
+		</div>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="row section-title">Shapes</div>
+	<div class="props">
+		<div class="checkbox">
+		    <input class="checkbox__box" type="checkbox" id="is-create-shapes" checked>
+		    <label class="checkbox__label" for="is-create-shapes">Create helper shapes</label>
+		</div>
+		<div class="checkbox">
+		    <input class="checkbox__box" type="checkbox" id="is-lock-helper-shapes" checked>
+		    <label class="checkbox__label" for="is-lock-helper-shapes">Lock helper shapes</label>
+		</div>
+	</div>
+</main>
+
+
+
+<main data-page="about" class="about">
+	<div class="description">
+		<div class="row description__item">The plugin contains presets for image sizes of social networks, which allows you to quickly begin directly to design development.</div>
+	</div>
+
+	<div class="divider"></div>
+	
+	<div class="row section-title">Links</div>
+
+	<div class="list">
+		<a class="row item" href="https://www.producthunt.com/posts/social-media-image-plugin" target="_blank">
+			<div class="item__img"><img src="<%= require('./img/producthunt.jpg') %>" alt=""></div>
+			<div class="item__title">This plugin on Producthunt</div>
+		</a>
+		<a class="row item" href="https://www.figma.com/c/plugin/750116735703341112/Social-Media-Image" target="_blank">
+			<div class="item__img"><img src="<%= require('./img/social-media-Image.png') %>" alt=""></div>
+			<div class="item__title">Homepage of this plugin</div>
+		</a>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="row section-title">Other author plugins</div>
+	<div class="list">
+		<a class="row item" href="https://www.figma.com/c/plugin/739517744595900126/Substrate-for-text-2.0" target="_blank">
+			<div class="item__img"><img src="<%= require('./img/substrate-for-text.jpg') %>" alt=""></div>
+			<div class="item__title">Substrate for text</div>
+		</a>
+		<a class="row item" href="https://www.figma.com/c/plugin/745971189153303901/Wave-%26-%D0%A1urve" target="_blank">
+			<div class="item__img"><img src="<%= require('./img/wave-and-curve.png') %>" alt=""></div>
+			<div class="item__title">Wave & Сurve</div>
+		</a>
+		<a class="row item" href="https://www.figma.com/c/plugin/773875667263247070/Snap-to-Grid" target="_blank">
+			<div class="item__img"><img src="<%= require('./img/snap-to-grid.jpg') %>" alt=""></div>
+			<div class="item__title">Snap to Grid</div>
+		</a>
+	</div>
+
+	<div class="divider"></div>
+	
+	<div class="row section-title">You can say thanks to the author...</div>
+
+	<div class="list">
+		<a class="row item" href="https://paypal.me/andreslav" target="_blank">
+			<div class="item__img"><img src="<%= require('./img/paypal.jpg') %>" alt=""></div>
+			<div class="item__title">PayPal.me</div>
+		</a>
+		<a class="row item" href="https://money.yandex.ru/to/410015176210928" target="_blank">
+			<div class="item__img"><img src="<%= require('./img/money-yandex.jpg') %>" alt=""></div>
+			<div class="item__title">Yandex.Money</div>
+		</a>
+	</div>
+</main>
+
+<p class="label last-update">Last update 18.09.2019</p>

@@ -13,7 +13,7 @@ module.exports = (env, argv) => ({
   watch: argv.mode === 'development',
 
   entry: {
-    ui: './src/ui.js', // The entry point for your UI code
+    ui: './src/ui.ts', // The entry point for your UI code
     code: './src/code.ts', // The entry point for your plugin code
   },
 

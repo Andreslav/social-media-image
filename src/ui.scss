@@ -3,15 +3,20 @@
 @import 'figma-plugin-ds-master/scss/base/variables';
 @import 'figma-plugin-ds-master/scss/base/mixins';
 
-@import './figma-plugin-ds-master/scss/components/_disclosure';
-@import './figma-plugin-ds-master/scss/components/_label';
+@import './figma-plugin-ds-master/scss/components/disclosure';
+@import './figma-plugin-ds-master/scss/components/label';
+@import './figma-plugin-ds-master/scss/components/checkbox';
+@import './figma-plugin-ds-master/scss/components/section-title';
+@import './figma-plugin-ds-master/scss/components/divider';
 
 
-body {
-	margin: 8px 0;
-}
-p {
+
+body, p {
 	margin: 0;
+}
+body {
+	display: flex;
+    flex-direction: column;
 }
 
 
@@ -26,20 +31,124 @@ p {
 	}
 	&--expanded &__content {
 		display: grid;
+		user-select: none;
+		&__size {
+			color: $figma-black-3;
+		}
 	}
 }
-.continer {
-	position: relative;
-	overflow: hidden;
-	display: grid;
-	grid-gap: 1em;
-	padding: 16px 0;
-    min-height: 100%;
+
+.header {
+	display: flex;
+    align-items: center;
+    padding: 4px 8px 0;
+	margin-bottom: -4px;
+	
+	&__menu-item {
+		user-select: none;
+		&:not(&--select) {
+			color: #b3b3b3;
+		}
+	}
+	&__icons {
+		display: flex;
+		margin-left: auto;
+	}
+	& + .divider {
+		margin-bottom: 0;
+	}
+}
+
+.row {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+.about, .settings {
+	margin-top: 8px;
+}
+
+.props {
+	padding-left: 8px;
+    padding-right: 8px;
+}
+
+.list {
+	.item {
+		display: flex;
+		align-items: center;
+		box-sizing: border-box;
+		border-radius: 2px;
+		height: 32px;
+		user-select: none;
+		@include font-ui-pos('small','normal');
+		text-decoration: none;
+		color: $figma-black-8;
+		cursor: default;
+		&:hover {
+			background-color: $figma-grey;
+		}
+
+		&__img {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 16px;
+			width: 16px;
+			flex: 0 0 16px;
+			line-height: 16px;
+			margin-right: 12px;
+	    	border-radius: 50%;
+			position: relative;
+			background-color: #fff;
+			user-select: none;
+			overflow: hidden;
+			>img {
+				width: 100%;
+			}
+			&::after {
+				content: '';
+				border-radius: 50%;
+				box-shadow: inset 0 0 0 1px
+				rgba(0,0,0,.098);
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+		}
+		&__title {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			@include font-ui-pos('small','normal');
+		}
+	}
+}
+
+.description {
+	@include font-ui-pos('small','normal');
+	color: $figma-black;
+	cursor: default;
+	&__item {
+		padding-bottom: 8px;
+		padding-top: 8px;
+	}
 }
 
 .last-update {
 	@include font-ui-pos('small','normal');
 	color: $figma-black-3;
 	text-align: center;
-	margin-top: auto;
+	padding-top: 8px;
+	padding-bottom: 8px;
+    margin-top: auto;
+	justify-content: center;
+}
+
+.hidden {
+	display: none !important;
 }

@@ -1,10 +1,11 @@
 {
-  "name": "Social Media Image",
+  "name": "social-media-image",
   "version": "1.0.0",
   "description": "A small plugin for Figma with presets for image sizes of social networks.",
   "main": "code.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prod": "webpack --mode=production",
+    "dev": "webpack --mode=development"
   },
   "author": "Andreslav Kozlov",
   "license": "ISC",
