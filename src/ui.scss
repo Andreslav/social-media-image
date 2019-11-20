@@ -127,6 +127,9 @@ body {
 			@include font-ui-pos('small','normal');
 		}
 	}
+	&:last-child {
+		margin-bottom: 8px;
+	}
 }
 
 .description {
