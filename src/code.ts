@@ -48,7 +48,6 @@ handleEvent("create-frame", (data: CreateSize) => {
     node.x = x
     node.y = y
 
-    figma.viewport.scrollAndZoomIntoView([node])
     figma.currentPage.selection = [node]
     figma.notify("Frame created")
 });
