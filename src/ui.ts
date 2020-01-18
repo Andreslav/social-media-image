@@ -1,8 +1,12 @@
-import { dispatch, handleEvent } from './handlers/uiMessageHandler';
+import 'simplebar/dist/simplebar.min.css'; 
 import './ui.scss';
+import { dispatch, handleEvent } from './handlers/uiMessageHandler';
+import SimpleBar from '../node_modules/simplebar/dist/simplebar.min.js';
 import './figma-plugin-ds-master/js/disclosure.js';
 import sizes from './config-size';
 
+
+new SimpleBar(document.getElementById("app"), { autoHide: false })
 
 
 // List
