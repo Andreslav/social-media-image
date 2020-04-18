@@ -478,7 +478,7 @@ const listSizes:listSizes = [
 				]
 			},{
 				type: "size",
-				name: "Artwork Plugin",
+				name: "Plugin Cover Art",
 				width: 1920,
 				height: 960,
 				guides: [],

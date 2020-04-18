@@ -3,6 +3,7 @@
 @import 'figma-plugin-ds-master/scss/base/variables';
 @import 'figma-plugin-ds-master/scss/base/mixins';
 
+@import './figma-plugin-ds-master/scss/components/button';
 @import './figma-plugin-ds-master/scss/components/disclosure';
 @import './figma-plugin-ds-master/scss/components/label';
 @import './figma-plugin-ds-master/scss/components/checkbox';
@@ -25,11 +26,17 @@ body {
 	&__label {
         padding-right: 12px;
 	}
+	&__item:last-child {
+        padding-bottom: 4px;
+	}
 	&__content {
 	    grid-template-columns: 1fr max-content;
 	    grid-gap: 1em;
 	    cursor: default;
         padding-right: 12px;
+        &:last-child {
+    	    margin-bottom: 4px;
+        }
 	    &.section {
 	        margin: 0 0 -8px -8px;
 	    }

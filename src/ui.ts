@@ -26,6 +26,7 @@ window["disclosure"].init();
 let isCreateGuides = document.getElementById("is-create-guides") as HTMLInputElement
 let isCreateShapes = document.getElementById("is-create-shapes") as HTMLInputElement
 let isLockHelperShapes = document.getElementById("is-lock-helper-shapes") as HTMLInputElement
+let addRelaunchBtn = document.getElementById("add-relaunch-btn") as HTMLInputElement
 handleEvent("set-settings", (data: Settings) => {
     isCreateGuides.checked = data.isCreateGuides
     isCreateShapes.checked = data.isCreateShapes
@@ -38,6 +39,9 @@ isCreateShapes.addEventListener("change", function(e) {
 })
 isLockHelperShapes.addEventListener("change", function(e) {
     dispatch('save-settings', {isLockHelperShapes: this.checked})
+})
+addRelaunchBtn.addEventListener("click", function(e) {
+    dispatch("add-relaunch-btn")
 })
 
 

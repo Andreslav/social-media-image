@@ -1,7 +1,10 @@
 {
-  "name": "Social Media Image",
-  "id": "750116735703341112",
-  "api": "1.0.0",
-  "main": "dist/code.js",
-  "ui": "dist/ui.html"
+	"name": "Social Media Image",
+	"id": "750116735703341112",
+	"api": "1.0.0",
+	"main": "dist/code.js",
+	"ui": "dist/ui.html",
+	"relaunchButtons": [
+		{"command": "open", "name": "Open Social Media Image"}
+	]
 }

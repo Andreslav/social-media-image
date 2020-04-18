@@ -37,7 +37,7 @@ handleEvent("create-frame", (data: CreateSize) => {
 		})
 	}
 
-	if (selection && selection.type == "FRAME") {
+	if (selection) {
 		x = selection.x + selection.width + 40
 		y = selection.y
 	} else {
@@ -48,12 +48,30 @@ handleEvent("create-frame", (data: CreateSize) => {
 	node.x = Math.round(x)
 	node.y = Math.round(y)
 
+	let bounds = figma.viewport.bounds
+	let right = x + node.width
+	let bottom = y + node.height
+	if (bounds.width < node.width 
+		|| bounds.height < node.height
+		|| (bounds.x + bounds.width) < right 
+		|| (bounds.y + bounds.height) < bottom
+		|| bounds.x > right 
+		|| bounds.y > bottom) 
+	{
+		figma.viewport.scrollAndZoomIntoView([node])
+	}
+
 	figma.currentPage.selection = [node]
 	figma.notify("Frame created")
 });
 
 handleEvent("save-settings", (data: Settings) => {
 	setPluginData("settings", Object.assign({}, getPluginData("settings"), data))
+})
+
+handleEvent("add-relaunch-btn", () => {
+	figma.root.setRelaunchData({ open: '' })
+	figma.notify("Button added")
 })
 
 
