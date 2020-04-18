@@ -479,8 +479,8 @@ const listSizes:listSizes = [
 			},{
 				type: "size",
 				name: "Artwork Plugin",
-				width: 2048,
-				height: 1024,
+				width: 1920,
+				height: 960,
 				guides: [],
 				shapes: []
 			}
